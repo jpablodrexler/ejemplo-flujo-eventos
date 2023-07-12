@@ -1,0 +1,30 @@
+version: '3.4'
+
+services:
+  rabbitmq:
+    image: rabbitmq:3-management-alpine
+    container_name: rabbitmq
+    volumes:
+      - rabbitmqdata:/var/lib/rabbitmq
+      - "./rabbitmq:/etc/pitstop/"
+    ports:
+      - "15672:15672"
+      - "5672:5672"
+    environment:
+      - RABBITMQ_CONFIG_FILE=/etc/pitstop/rabbitmq.conf
+
+  webappproductor:
+    image: ${DOCKER_REGISTRY-}webappproductor
+    build:
+      context: .
+      dockerfile: WebAppProductor/Dockerfile
+
+  webappconsumidor:
+    image: ${DOCKER_REGISTRY-}webappconsumidor
+    build:
+      context: .
+      dockerfile: WebAppConsumidor/Dockerfile
+
+volumes:
+  rabbitmqdata:
+    external: true
