@@ -38,8 +38,8 @@ Si se ejecuta la solución por línea de comandos:
 
 - En Docker Desktop, ir al panel Containers:
 ![Containers](screenshot-containers.png)
-- Seleccionar el container "WebAppProductor-1".
-- Debajo del nombre del container, hacer clic en el enlace para el puerto 443.
+- Seleccionar el container `WebAppProductor-1`.
+- Debajo del nombre del container, hacer clic en el enlace para el puerto `443`.
 ![WebAppProductor](screenshot-webappproductor.png)
 - La ventana abierta en el navegador no presentará ninguna página, dado que la URL comienza con `http` en lugar de `https`.
 ![WebAppProductorSwagger1](screenshot-webappproductor-swagger-1.png)
