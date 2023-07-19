@@ -53,3 +53,13 @@ Si se ejecuta la solución por línea de comandos:
 - En la ventana del navegador, reemplazar `localhost:58476` por `https://localhost:58476/swagger/index.html`. El puerto `58476` es asignado automáticamente por Docker al momento de crear el container. En siguientes ejecuciones el número de puerto será diferente.
 
 ![WebAppProductorSwagger2](screenshot-webappproductor-swagger-2.png)
+
+- En la página de Swagger, hacer clic en el panel `/Productor`.
+- Hacer clic en el botón `Try it out`.
+
+![WebAppProductorSwagger3](screenshot-webappproductor-swagger-3.png)
+
+- En el campo `mensaje` ingresar el contenido de un mensaje a transmitir.
+- Hacer clic en el botón `Execute`.
+
+![WebAppProductorSwagger4](screenshot-webappproductor-swagger-4.png)
