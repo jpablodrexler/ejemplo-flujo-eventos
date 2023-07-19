@@ -18,7 +18,7 @@ Los 3 componentes son instanciados utilizando Docker Compose.
 
 ### En Docker Desktop
 
-- Crear volumen "rabbitmqdata"
+- Crear volumen `rabbitmqdata`
 
 ### En Visual Studio
 
@@ -32,16 +32,24 @@ Los 3 componentes son instanciados utilizando Docker Compose.
 
 ## ¿Cómo enviar un mensaje?
 
+### Ejecutando en Visual Studio
+
 Al ejecutar la solución en Visual Studio, se abrirá automáticamente la página de Swagger de WebAppProductor.
+
+### Ejecutando en línea de comandos
 
 Si se ejecuta la solución por línea de comandos:
 
 - En Docker Desktop, ir al panel Containers:
+
 ![Containers](screenshot-containers.png)
 - Seleccionar el container `WebAppProductor-1`.
 - Debajo del nombre del container, hacer clic en el enlace para el puerto `443`.
+
 ![WebAppProductor](screenshot-webappproductor.png)
 - La ventana abierta en el navegador no presentará ninguna página, dado que la URL comienza con `http` en lugar de `https`.
+
 ![WebAppProductorSwagger1](screenshot-webappproductor-swagger-1.png)
 - En la ventana del navegador, reemplazar `localhost:58476` por `https://localhost:58476/swagger/index.html`. El puerto `58476` es asignado automáticamente por Docker al momento de crear el container. En siguientes ejecuciones el número de puerto será diferente.
+
 ![WebAppProductorSwagger2](screenshot-webappproductor-swagger-2.png)
