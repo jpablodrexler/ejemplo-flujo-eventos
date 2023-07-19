@@ -63,3 +63,13 @@ Si se ejecuta la solución por línea de comandos:
 - Hacer clic en el botón `Execute`.
 
 ![WebAppProductorSwagger4](screenshot-webappproductor-swagger-4.png)
+
+## ¿Cómo verificar que el mensaje es recibido?
+
+- En Docker Desktop, ir al panel Containers:
+
+![Containers](screenshot-containers.png)
+- Seleccionar el container `WebAppConsumidor-1`.
+- El mensaje aparece en una entrada del log del container.
+
+![WebAppConsumidorLogs](screenshot-webappconsumidor-logs.png)
