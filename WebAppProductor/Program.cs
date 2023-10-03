@@ -16,7 +16,9 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
-app.UseHttpsRedirection();
+// Esta instruccion se quita para probar directamente
+// a traves de HTTP sin necesidad de configurar certificado para HTTPS.
+//app.UseHttpsRedirection();
 
 app.UseAuthorization();
 
