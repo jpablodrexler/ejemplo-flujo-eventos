@@ -49,7 +49,7 @@ Si se ejecuta la solución por línea de comandos:
 - La ventana abierta en el navegador no presentará ninguna página.
 
 ![WebAppProductorSwagger1](screenshot-webappproductor-swagger-1.png)
-- En la ventana del navegador, reemplazar `localhost:5000` por http://localhost:5000/swagger/index.html
+- En el navegador, abrir http://localhost:5000/swagger/index.html
 - El puerto `5000` es asignado en el archivo `docker-compose.override.yml`.
 
 ![WebAppProductorSwagger2](screenshot-webappproductor-swagger-2.png)
