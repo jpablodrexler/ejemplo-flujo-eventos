@@ -49,7 +49,8 @@ Si se ejecuta la solución por línea de comandos:
 - La ventana abierta en el navegador no presentará ninguna página.
 
 ![WebAppProductorSwagger1](screenshot-webappproductor-swagger-1.png)
-- En la ventana del navegador, reemplazar `localhost:5000` por `http://localhost:5000/swagger/index.html`. El puerto `5000` es asignado en el archivo `docker-compose.override.yml`.
+- En la ventana del navegador, reemplazar `localhost:5000` por `http://localhost:5000/swagger/index.html`.
+- El puerto `5000` es asignado en el archivo `docker-compose.override.yml`.
 
 ![WebAppProductorSwagger2](screenshot-webappproductor-swagger-2.png)
 
@@ -67,7 +68,7 @@ Si se ejecuta la solución por línea de comandos:
 
 - En Visual Studio, en la ventana Containers:
 
-![WebAppConsumidorLogs](screenshot-webappconsumidor-logs.png)
+![WebAppConsumidorLogs](screenshot-webappconsumidor-logs-1.png)
 
 - En Rancher Desktop, ir plugin Logs Explorer (debe ser instalado por separado):
 - El mensaje aparece en una entrada del log del container.
