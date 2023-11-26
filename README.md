@@ -6,19 +6,19 @@ El ejemplo define 3 componentes:
 - WebAppProductor: Una aplicación web que permite enviar mensajes a través de RabbitMQ. Para ingresar el mensaje expone un endpoint REST.
 - WebAppConsumidor: Una aplicación web que permite recibir mensajes a través de RabbitMQ. Los mensajes son visibles a través del log de la aplicación.
 
-Los 3 componentes son instanciados utilizando Docker Compose.
+Los 3 componentes son instanciados utilizando Rancher Desktop.
 
 ## Technologías usadas
 
 - [.NET 6.0](https://dotnet.microsoft.com/)
 - [RabbitMQ](https://www.rabbitmq.com/)
-- [Docker](https://www.docker.com/)
+- [Rancher Desktop](https://rancherdesktop.io/)
 
 ## ¿Cómo ejecutar?
 
-### En Docker Desktop
+### En Rancher Desktop
 
-- Crear volumen `rabbitmqdata`
+- Crear volumen `rabbitmqdata` a través del siguiente comando: `docker volume create --driver local rabbitmqdata`
 
 ### En Visual Studio
 
@@ -40,17 +40,16 @@ Al ejecutar la solución en Visual Studio, se abrirá automáticamente la págin
 
 Si se ejecuta la solución por línea de comandos:
 
-- En Docker Desktop, ir al panel Containers:
+- En Rancher Desktop, ir al panel Containers:
 
 ![Containers](screenshot-containers.png)
-- Seleccionar el container `WebAppProductor-1`.
-- Debajo del nombre del container, hacer clic en el enlace para el puerto `443`.
+- Seleccionar el container `WebAppProductor`.
+- A la derecha del nombre del container, hacer clic en el enlace para el puerto `5000`.
 
-![WebAppProductor](screenshot-webappproductor.png)
-- La ventana abierta en el navegador no presentará ninguna página, dado que la URL comienza con `http` en lugar de `https`.
+- La ventana abierta en el navegador no presentará ninguna página.
 
 ![WebAppProductorSwagger1](screenshot-webappproductor-swagger-1.png)
-- En la ventana del navegador, reemplazar `localhost:58476` por `https://localhost:58476/swagger/index.html`. El puerto `58476` es asignado automáticamente por Docker al momento de crear el container. En siguientes ejecuciones el número de puerto será diferente.
+- En la ventana del navegador, reemplazar `localhost:5000` por `http://localhost:5000/swagger/index.html`. El puerto `5000` es asignado en el archivo `docker-compose.override.yml`.
 
 ![WebAppProductorSwagger2](screenshot-webappproductor-swagger-2.png)
 
@@ -66,10 +65,11 @@ Si se ejecuta la solución por línea de comandos:
 
 ## ¿Cómo verificar que el mensaje es recibido?
 
-- En Docker Desktop, ir al panel Containers:
-
-![Containers](screenshot-containers.png)
-- Seleccionar el container `WebAppConsumidor-1`.
-- El mensaje aparece en una entrada del log del container.
+- En Visual Studio, en la ventana Containers:
 
 ![WebAppConsumidorLogs](screenshot-webappconsumidor-logs.png)
+
+- En Rancher Desktop, ir plugin Logs Explorer (debe ser instalado por separado):
+- El mensaje aparece en una entrada del log del container.
+
+![WebAppConsumidorLogs](screenshot-webappconsumidor-logs-2.png)
