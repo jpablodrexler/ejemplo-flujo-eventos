@@ -70,7 +70,7 @@ Si se ejecuta la solución por línea de comandos:
 
 ![WebAppConsumidorLogs](screenshot-webappconsumidor-logs-1.png)
 
-- En Rancher Desktop, ir plugin Logs Explorer (debe ser instalado por separado):
-- El mensaje aparece en una entrada del log del container.
+- En Rancher Desktop, ir plugin Logs Explorer (debe ser instalado por separado).
+- El mensaje aparece en una entrada del log del container:
 
 ![WebAppConsumidorLogs](screenshot-webappconsumidor-logs-2.png)
